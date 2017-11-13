@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script type="text/javascript" src="../node_modules/bluebird/js/browser/bluebird.min.js"></script>
+    <script type="text/javascript" src="../node_modules/hammerjs/hammer.min.js"></script>
+
+    <script  type="text/javascript" src="../node_modules/mocha/mocha.js"></script>
+    <script> mocha.setup('qunit'); </script>
+    <script  type="text/javascript" src='../builds/tests/benchmarks.js'></script>
+
+    <!-- run mocha -->
+    <script type="text/javascript" charset="utf-8">
+            mocha.run();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,9641 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>OpenSceneGraph 0.2.7 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>OpenSceneGraph</h3>
+          <div class='mb1'><code>0.2.7</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#autotransform'
+                  class="">
+                  AutoTransform
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#blendcolor'
+                  class="">
+                  BlendColor
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setconstantcolor'
+                  class="">
+                  setConstantColor
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#blendfunc'
+                  class="">
+                  BlendFunc
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#blendfunc'
+                  class="">
+                  BlendFunc
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#attributetype'
+                  class="">
+                  attributeType
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#clonetype'
+                  class="">
+                  cloneType
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#apply'
+                  class="">
+                  apply
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#bufferarray'
+                  class="">
+                  BufferArray
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#camera'
+                  class="">
+                  Camera
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setprojectionmatrixasortho'
+                  class="">
+                  setProjectionMatrixAsOrtho
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cullface'
+                  class="">
+                  CullFace
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cullvisitor'
+                  class="">
+                  CullVisitor
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#popstateset'
+                  class="">
+                  popStateSet
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#drawarraylengths'
+                  class="">
+                  DrawArrayLengths
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#drawarrays'
+                  class="">
+                  DrawArrays
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#drawelements'
+                  class="">
+                  DrawElements
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#framebufferobject'
+                  class="">
+                  FrameBufferObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#geometry'
+                  class="">
+                  Geometry
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getprimitivesetlist'
+                  class="">
+                  getPrimitiveSetList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setvertexattribarray'
+                  class="">
+                  setVertexAttribArray
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generatedrawcommand'
+                  class="">
+                  generateDrawCommand
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#lightsource'
+                  class="">
+                  LightSource
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#lod'
+                  class="">
+                  Lod
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setradius'
+                  class="">
+                  setRadius
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#matrixtransform'
+                  class="">
+                  MatrixTransform
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#node'
+                  class="">
+                  Node
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getorcreatestateset'
+                  class="">
+                  getOrCreateStateSet
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getupdatecallback'
+                  class="">
+                  getUpdateCallback
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setcullcallback'
+                  class="">
+                  setCullCallback
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#logsub'
+                  class="">
+                  logSub
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#object'
+                  class="">
+                  Object
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#pagedlod'
+                  class="">
+                  PagedLod
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#perrangedata'
+                  class="">
+                  PerRangeData
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#plane'
+                  class="">
+                  Plane
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#polytope'
+                  class="">
+                  Polytope
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#settounitfrustum'
+                  class="">
+                  setToUnitFrustum
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#settoboundingbox'
+                  class="">
+                  setToBoundingBox
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#containsvertex'
+                  class="">
+                  containsVertex
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#containsvertices'
+                  class="">
+                  containsVertices
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#containsboundingsphere'
+                  class="">
+                  containsBoundingSphere
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#containsboundingbox'
+                  class="">
+                  containsBoundingBox
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#containsallofvertices'
+                  class="">
+                  containsAllOfVertices
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#containsallofboundingsphere'
+                  class="">
+                  containsAllOfBoundingSphere
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#containsallofboundingbox'
+                  class="">
+                  containsAllOfBoundingBox
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#transformprovidinginverse'
+                  class="">
+                  transformProvidingInverse
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#set'
+                  class="">
+                  set
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getorcreateobject'
+                  class="">
+                  getOrCreateObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#functordrawelements'
+                  class="">
+                  functorDrawElements
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#functordrawelements'
+                  class="">
+                  functorDrawElements
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#program'
+                  class="">
+                  Program
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#renderbin'
+                  class="">
+                  RenderBin
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#renderstage'
+                  class="">
+                  RenderStage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shader'
+                  class="">
+                  Shader
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createtexturedbox'
+                  class="">
+                  createTexturedBox
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createtexturedsphere'
+                  class="">
+                  createTexturedSphere
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setvertexarrayobject'
+                  class="">
+                  setVertexArrayObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stateset'
+                  class="">
+                  StateSet
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#switch'
+                  class="">
+                  Switch
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#texture'
+                  class="">
+                  Texture
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#texturecubemap'
+                  class="">
+                  TextureCubeMap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#transform'
+                  class="">
+                  Transform
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#uniform'
+                  class="">
+                  Uniform
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#vertexarrayobject'
+                  class="">
+                  VertexArrayObject
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#animationupdatecallback'
+                  class="">
+                  AnimationUpdateCallback
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#basicanimationmanager'
+                  class="">
+                  BasicAnimationManager
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#bone'
+                  class="">
+                  Bone
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#findnearestparentskeleton'
+                  class="">
+                  FindNearestParentSkeleton
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#morphattribute'
+                  class="">
+                  MorphAttribute
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#morphgeometry'
+                  class="">
+                  MorphGeometry
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#rigtransformhardware'
+                  class="">
+                  RigTransformHardware
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#skinningattribute'
+                  class="">
+                  SkinningAttribute
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stackedtranslate'
+                  class="">
+                  StackedTranslate
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatebone'
+                  class="">
+                  UpdateBone
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatematrixtransform'
+                  class="">
+                  UpdateMatrixTransform
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#validateskeletonvisitor'
+                  class="">
+                  ValidateSkeletonVisitor
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updateskeleton'
+                  class="">
+                  UpdateSkeleton
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#databasepager'
+                  class="">
+                  DatabasePager
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#registry'
+                  class="">
+                  Registry
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cadmanipulator'
+                  class="">
+                  CADManipulator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#firstpersonmanipulator'
+                  class="">
+                  FirstPersonManipulator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#firstpersonmanipulator'
+                  class="">
+                  FirstPersonManipulator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#orbitmanipulator'
+                  class="">
+                  OrbitManipulator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#switchmanipulator'
+                  class="">
+                  SwitchManipulator
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#loadaccessorbuffer'
+                  class="">
+                  loadAccessorBuffer
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#loadtransform'
+                  class="">
+                  loadTransform
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#preprocessanimations'
+                  class="">
+                  preprocessAnimations
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shadowedscene'
+                  class="">
+                  ShadowedScene
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cleanscenegraph'
+                  class="">
+                  cleanSceneGraph
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#dirty'
+                  class="">
+                  dirty
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#computemultifrustumboundsvisitor'
+                  class="">
+                  ComputeMultiFrustumBoundsVisitor
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shadowmap'
+                  class="">
+                  ShadowMap
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#settextureunitbase'
+                  class="">
+                  setTextureUnitBase
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#settextureunitbase'
+                  class="">
+                  setTextureUnitBase
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#init'
+                  class="">
+                  init
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#init'
+                  class="">
+                  init
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#init'
+                  class="">
+                  init
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#init'
+                  class="">
+                  init
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shadowmapatlas'
+                  class="">
+                  ShadowMapAtlas
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shadowreceiveattribute'
+                  class="">
+                  ShadowReceiveAttribute
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shadowsettings'
+                  class="">
+                  ShadowSettings
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shadowtechnique'
+                  class="">
+                  ShadowTechnique
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shadowtexture'
+                  class="">
+                  ShadowTexture
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#shadowtexture'
+                  class="">
+                  ShadowTexture
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#text'
+                  class="">
+                  Text
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#polytopeintersector'
+                  class="">
+                  PolytopeIntersector
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#computeintersections'
+                  class="">
+                  computeIntersections
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#log'
+                  class="">
+                  log
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#error'
+                  class="">
+                  error
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#glvalidenumcontexts'
+                  class="">
+                  glValidEnumContexts
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#glenums'
+                  class="">
+                  glEnums
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#enumstringtovalue'
+                  class="">
+                  enumStringToValue
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#checkinit'
+                  class="">
+                  checkInit
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mightbeenum'
+                  class="">
+                  mightBeEnum
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mightbeenum'
+                  class="">
+                  mightBeEnum
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#glenumtostring'
+                  class="">
+                  glEnumToString
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#glenumtostring'
+                  class="">
+                  glEnumToString
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#glfunctionargtostring'
+                  class="">
+                  glFunctionArgToString
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#glfunctionargtostring'
+                  class="">
+                  glFunctionArgToString
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#glfunctionargstostring'
+                  class="">
+                  glFunctionArgsToString
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#glfunctionargstostring'
+                  class="">
+                  glFunctionArgsToString
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#makedebugcontext'
+                  class="">
+                  makeDebugContext
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#makedebugcontext'
+                  class="">
+                  makeDebugContext
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#makelostcontextsimulatingcanvas'
+                  class="">
+                  makeLostContextSimulatingCanvas
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resettoinitialstate'
+                  class="">
+                  resetToInitialState
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#webglutils'
+                  class="">
+                  WebGLUtils
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#makefailhtml'
+                  class="">
+                  makeFailHTML
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#get_a_webgl_browser'
+                  class="">
+                  GET_A_WEBGL_BROWSER
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#other_problem'
+                  class="">
+                  OTHER_PROBLEM
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setupwebgl'
+                  class="">
+                  setupWebGL
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#'
+                  class="">
+                  
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#checkandcreate3dcontext'
+                  class="">
+                  checkAndCreate3DContext
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#create3dcontext'
+                  class="">
+                  create3DContext
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#requestanimationframe'
+                  class="">
+                  requestAnimationFrame
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='autotransform'>
+      AutoTransform
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>AutoTransform is a derived form of Transform that automatically
+scales or rotates to keep its children aligned with screen coordinates.
+W.r.t. AutorotateModes only rotate to screen is supported right now.
+More AutorotateModes modes should be addressed in the future.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AutoTransform()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='blendcolor'>
+      BlendColor
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Manage BlendColor attribute</p>
+
+
+  <div class='pre p1 fill-light mt0'>new BlendColor(color: any)</div>
+  
+  
+    <p>
+      Extends
+      
+        StateAttribute
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>color</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setconstantcolor'>
+      setConstantColor
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>setConstantColor(color: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>color</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='blendfunc'>
+      BlendFunc
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Manage Blending mode</p>
+
+
+  <div class='pre p1 fill-light mt0'>new BlendFunc(sourceRGB: any, destinationRGB: any, sourceAlpha: any, destinationAlpha: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sourceRGB</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>destinationRGB</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sourceAlpha</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>destinationAlpha</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='blendfunc'>
+      BlendFunc
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>BlendFunc</p>
+
+
+  <div class='pre p1 fill-light mt0'>BlendFunc</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='attributetype'>
+      attributeType
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>StateAttribute type of BlendFunc</p>
+
+
+  <div class='pre p1 fill-light mt0'>attributeType</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='clonetype'>
+      cloneType
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create an instance of this StateAttribute</p>
+
+
+  <div class='pre p1 fill-light mt0'>cloneType()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='apply'>
+      apply
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Apply the mode, must be called in the draw traversal</p>
+
+
+  <div class='pre p1 fill-light mt0'>apply(state: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>state</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='bufferarray'>
+      BufferArray
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>BufferArray manage vertex / normal / ... array used by webgl.
+osgjs automatically converts array buffers to Float32Array and
+element array buffers to Uint16Array if not said explicitly with
+preserveArrayType variable in constructor.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new BufferArray(target: any, elements: any, itemSize: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>target</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>elements</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>itemSize</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='camera'>
+      Camera
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Camera - is a subclass of Transform which represents encapsulates the settings of a Camera.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Camera()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setprojectionmatrixasortho'>
+      setProjectionMatrixAsOrtho
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Set to an orthographic projection. See OpenGL glOrtho for documentation further details.</p>
+
+
+  <div class='pre p1 fill-light mt0'>setProjectionMatrixAsOrtho(left: any, right: any, bottom: any, top: any, zNear: any, zFar: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>left</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>right</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bottom</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>top</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>zNear</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>zFar</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cullface'>
+      CullFace
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Manage CullFace attribute</p>
+
+
+  <div class='pre p1 fill-light mt0'>new CullFace(mode: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mode</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cullvisitor'>
+      CullVisitor
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>CullVisitor traverse the tree and collect Matrix/State for the rendering traverse</p>
+
+
+  <div class='pre p1 fill-light mt0'>new CullVisitor()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='popstateset'>
+      popStateSet
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Pop the top state set and hence associated state group.
+Move the current state group to the parent of the popped
+state group.</p>
+
+
+  <div class='pre p1 fill-light mt0'>popStateSet()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='drawarraylengths'>
+      DrawArrayLengths
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>DrawArrayLengths manage rendering primitives</p>
+
+
+  <div class='pre p1 fill-light mt0'>new DrawArrayLengths(mode: any, first: any, array: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mode</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>first</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='drawarrays'>
+      DrawArrays
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>DrawArrays manage rendering primitives</p>
+
+
+  <div class='pre p1 fill-light mt0'>new DrawArrays(mode: any, first: any, count: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mode</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>first</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>count</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='drawelements'>
+      DrawElements
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>DrawElements manage rendering of indexed primitives</p>
+
+
+  <div class='pre p1 fill-light mt0'>new DrawElements(mode: any, indices: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>mode</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>indices</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='framebufferobject'>
+      FrameBufferObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>FrameBufferObject manage fbo / rtt</p>
+
+
+  <div class='pre p1 fill-light mt0'>new FrameBufferObject()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='geometry'>
+      Geometry
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Geometry manage array and primitives to draw a geometry.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Geometry()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getprimitivesetlist'>
+      getPrimitiveSetList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Return the primitiveset list
+If you modify something inside this array
+you must call dirty() on the Geometry</p>
+
+
+  <div class='pre p1 fill-light mt0'>getPrimitiveSetList()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setvertexattribarray'>
+      setVertexAttribArray
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Set the buffer array on the attribute name key
+key is often something like Vertex, Normal, Color, ...
+for classic geometry</p>
+<p>if you change a buffer a dirty will be automatically
+called to rebuild the VAO if needed.</p>
+
+
+  <div class='pre p1 fill-light mt0'>setVertexAttribArray(key: any, array: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>array</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generatedrawcommand'>
+      generateDrawCommand
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generate a function specific to the Geometry/Program
+two version one using VAO and a regular one</p>
+
+
+  <div class='pre p1 fill-light mt0'>generateDrawCommand</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='lightsource'>
+      LightSource
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>LightSource is a positioned node to use with StateAttribute Light</p>
+
+
+  <div class='pre p1 fill-light mt0'>new LightSource()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='lod'>
+      Lod
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Lod that can contains child node</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Lod()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setradius'>
+      setRadius
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Set the object-space reference radius of the volume enclosed by the LOD.
+Used to determine the bounding sphere of the LOD in the absence of any children.</p>
+
+
+  <div class='pre p1 fill-light mt0'>setRadius(radius: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>radius</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='matrixtransform'>
+      MatrixTransform
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>MatrixTransform is a Transform Node that can be customized with user matrix</p>
+
+
+  <div class='pre p1 fill-light mt0'>new MatrixTransform()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='node'>
+      Node
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Node that can contains child node</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Node()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getorcreatestateset'>
+      getOrCreateStateSet
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Return StateSet and create it if it does not exist yet</p>
+
+
+  <div class='pre p1 fill-light mt0'>getOrCreateStateSet()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getupdatecallback'>
+      getUpdateCallback
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get update node callback, called during update traversal.</p>
+
+
+  <div class='pre p1 fill-light mt0'>getUpdateCallback()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setcullcallback'>
+      setCullCallback
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>
+Set cull node callback, called during cull traversal.
+The Object must have the following method
+cull(node, nodeVisitor) {}
+note, callback is responsible for scenegraph traversal so
+they must return true to traverse.
+</p>
+<p>
+Here a dummy CullCallback example
+</p>
+
+
+  <div class='pre p1 fill-light mt0'>setCullCallback(cb: any, Oject: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cb</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>Oject</span> <code class='quiet'>(any)</code>
+	    callback
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> DummyCullCallback = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{};
+DummyCullCallback.prototype = {
+<span class="hljs-attr">cull</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">node, nodeVisitor</span>) </span>{
+<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+};</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='logsub'>
+      logSub
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>logging with readability in mind.</p>
+
+
+  <div class='pre p1 fill-light mt0'>logSub(intLevel: any, strLevel: any, str: any, what: level, actual: str, sometimes: fold)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>intLevel</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>strLevel</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>str</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>what</span> <code class='quiet'>(level)</code>
+	    severity is that log (gives text color too )
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>actual</span> <code class='quiet'>(str)</code>
+	    log text
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sometimes</span> <code class='quiet'>(fold)</code>
+	    you want to hide looooong text
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='object'>
+      Object
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Object class</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Object()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pagedlod'>
+      PagedLod
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>PagedLOD that can contains paged child nodes</p>
+
+
+  <div class='pre p1 fill-light mt0'>new PagedLod()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='perrangedata'>
+      PerRangeData
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>PerRangeData utility structure to store per range values</p>
+
+
+  <div class='pre p1 fill-light mt0'>new PerRangeData()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='plane'>
+      Plane
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>Plane</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='polytope'>
+      Polytope
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Polytope class for representing convex clipping volumes made up of a set of planes.
+When adding planes, their normals should point inwards (into the volume)</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Polytope()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='settounitfrustum'>
+      setToUnitFrustum
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create a Polytope which is a cube, centered at 0,0,0, with sides of 2 units.</p>
+
+
+  <div class='pre p1 fill-light mt0'>setToUnitFrustum(withNear: any, withFar: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>withNear</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>withFar</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='settoboundingbox'>
+      setToBoundingBox
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create a Polytope which is a equivalent to BoundingBox.</p>
+
+
+  <div class='pre p1 fill-light mt0'>setToBoundingBox(bb: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bb</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='containsvertex'>
+      containsVertex
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Check whether a vertex is contained within clipping set.</p>
+
+
+  <div class='pre p1 fill-light mt0'>containsVertex(v: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>v</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='containsvertices'>
+      containsVertices
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Check whether any part of vertex list is contained within clipping set.</p>
+
+
+  <div class='pre p1 fill-light mt0'>containsVertices(vertices: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>vertices</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='containsboundingsphere'>
+      containsBoundingSphere
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Check whether any part of a bounding sphere is contained within clipping set.
+Using a mask to determine which planes should be used for the check, and
+modifying the mask to turn off planes which wouldn't contribute to clipping
+of any internal objects.  This feature is used in osgUtil::CullVisitor
+to prevent redundant plane checking.</p>
+
+
+  <div class='pre p1 fill-light mt0'>containsBoundingSphere(bs: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bs</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='containsboundingbox'>
+      containsBoundingBox
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Check whether any part of a bounding box is contained within clipping set.
+Using a mask to determine which planes should be used for the check, and
+modifying the mask to turn off planes which wouldn't contribute to clipping
+of any internal objects.  This feature is used in osgUtil::CullVisitor
+to prevent redundant plane checking.</p>
+
+
+  <div class='pre p1 fill-light mt0'>containsBoundingBox(bb: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bb</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='containsallofvertices'>
+      containsAllOfVertices
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Check whether all of vertex list is contained with clipping set.</p>
+
+
+  <div class='pre p1 fill-light mt0'>containsAllOfVertices(vertices: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>vertices</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='containsallofboundingsphere'>
+      containsAllOfBoundingSphere
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Check whether the entire bounding sphere is contained within clipping set.</p>
+
+
+  <div class='pre p1 fill-light mt0'>containsAllOfBoundingSphere(bs: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bs</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='containsallofboundingbox'>
+      containsAllOfBoundingBox
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Check whether the entire bounding box is contained within clipping set.</p>
+
+
+  <div class='pre p1 fill-light mt0'>containsAllOfBoundingBox(bbox: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bbox</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='transformprovidinginverse'>
+      transformProvidingInverse
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Transform the clipping set by provide a pre inverted matrix.
+see transform for details.</p>
+
+
+  <div class='pre p1 fill-light mt0'>transformProvidingInverse(matrix: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>matrix</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='set'>
+      set
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Set a key value
+you have to check that the key does not exist before otherwise you could hit performance hit when calling reset/forEach</p>
+
+
+  <div class='pre p1 fill-light mt0'>set(key: any, value: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>key</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getorcreateobject'>
+      getOrCreateObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates or returns an existing object.
+The returned object could contain invalid data from previous object values. User is responsible to reset/init the returned object for its (re)use.</p>
+
+
+  <div class='pre p1 fill-light mt0'>getOrCreateObject()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='functordrawelements'>
+      functorDrawElements
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>PrimitiveFunctor emulates the TemplatePrimitiveFunctor class in OSG and can
+be used to get access to the vertices that compose the things drawn by osgjs.</p>
+<p>You have to feed it with an object that references 3 callbacks :</p>
+<p>var myObject = {
+operatorPoint : function ( v ) { }, // Do your point operations here
+operatorLine : function ( v1, v2 ){ }, // Do you line operations here
+operatorTriangle : function ( v1, v2, v3 ) { } // Do your triangle operations here
+};</p>
+
+
+  <div class='pre p1 fill-light mt0'>functorDrawElements</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='functordrawelements'>
+      functorDrawElements
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>PrimitiveIndexFunctor emulates the TemplatePrimitiveIndexFunctor class in OSG and can
+be used to get access to the vertices that compose the things drawn by osgjs.</p>
+<p>You have to feed it with an object that references 3 callbacks :</p>
+<p>var myObject = {
+operatorPoint : function ( v ) { }, // Do your point operations here
+operatorLine : function ( v1, v2 ){ }, // Do you line operations here
+operatorTriangle : function ( v1, v2, v3 ) { } // Do your triangle operations here
+};</p>
+
+
+  <div class='pre p1 fill-light mt0'>functorDrawElements</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='program'>
+      Program
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Program encapsulate an vertex and fragment shader</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Program(vShader: any, fShader: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>vShader</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fShader</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='renderbin'>
+      RenderBin
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>RenderBin base class. Renderbin contains geometries to be rendered as a group,
+renderbins are rendered once each.  They can improve efficiency or
+use different rendering algorithms.
+A renderBin can contain further renderBins producing a tree hierarchy of renderBins.</p>
+<p><a href="https://github.com/openscenegraph/osg/blob/master/include/osgUtil/RenderBin#L27-L32">https://github.com/openscenegraph/osg/blob/master/include/osgUtil/RenderBin#L27-L32</a></p>
+
+
+  <div class='pre p1 fill-light mt0'>RenderBin(sortMode: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sortMode</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='renderstage'>
+      RenderStage
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>From OpenSceneGraph <a href="http://www.openscenegraph.org">http://www.openscenegraph.org</a>
+RenderStage base class. Used for encapsulate a complete stage in
+rendering - setting up of viewport, the projection and model
+matrices and rendering the RenderBin's enclosed with this RenderStage.
+RenderStage also has a dependency list of other RenderStages, each
+of which must be called before the rendering of this stage.  These
+'pre' rendering stages are used for advanced rendering techniques
+like multistage pixel shading or impostors.</p>
+
+
+  <div class='pre p1 fill-light mt0'>RenderStage()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shader'>
+      Shader
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Shader manage shader for vertex and fragment, you need both to create a glsl program.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Shader(type: any, text: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>type</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>text</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createtexturedbox'>
+      createTexturedBox
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create a Textured Box on the given center with given size</p>
+
+
+  <div class='pre p1 fill-light mt0'>createTexturedBox(cx: any, cy: any, cz: any, sx: any, sy: any, sz: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cx</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cy</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cz</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sx</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sy</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sz</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createtexturedsphere'>
+      createTexturedSphere
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Create a Textured Sphere on the given center with given radius</p>
+
+
+  <div class='pre p1 fill-light mt0'>createTexturedSphere(radius: any, widthSegments: any, heightSegments: any, phiStart: any, phiLength: any, thetaStart: any, thetaLength: any)</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Darrell Esau</div>
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>radius</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>widthSegments</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>heightSegments</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>phiStart</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>phiLength</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>thetaStart</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>thetaLength</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setvertexarrayobject'>
+      setVertexArrayObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>set a vertex array object.
+return true if binded the vao and false
+if was already binded</p>
+
+
+  <div class='pre p1 fill-light mt0'>setVertexArrayObject(vao: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>vao</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stateset'>
+      StateSet
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Stores a set of modes and attributes which represent a set of OpenGL state.
+Notice that a \c StateSet contains just a subset of the whole OpenGL state.</p>
+<p>In OSG, each \c Drawable and each \c Node has a reference to a
+\c StateSet. These <tt>StateSet</tt>s can be shared between
+different <tt>Drawable</tt>s and <tt>Node</tt>s (that is, several
+<tt>Drawable</tt>s and <tt>Node</tt>s can reference the same \c StateSet).
+Indeed, this practice is recommended whenever possible,
+as this minimizes expensive state changes in the graphics pipeline.
+
+
+  <div class='pre p1 fill-light mt0'>StateSet()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='switch'>
+      Switch
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Switch that can switch on and off separate children</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Switch()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='texture'>
+      Texture
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Texture encapsulate webgl texture object</p>
+
+
+  <div class='pre p1 fill-light mt0'>Texture()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='texturecubemap'>
+      TextureCubeMap
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>TextureCubeMap</p>
+
+
+  <div class='pre p1 fill-light mt0'>new TextureCubeMap()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='transform'>
+      Transform
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Transform - base class for Transform type node ( Camera, MatrixTransform )</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Transform()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='uniform'>
+      Uniform
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Uniform manage variable used in glsl shader.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Uniform(name: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>name</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='vertexarrayobject'>
+      VertexArrayObject
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>VertexArrayObject "Bundles" multipel vertex / normal / ... buffer bind
+in one webgl call</p>
+
+
+  <div class='pre p1 fill-light mt0'>new VertexArrayObject()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='animationupdatecallback'>
+      AnimationUpdateCallback
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>AnimationUpdateCallback</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AnimationUpdateCallback()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='basicanimationmanager'>
+      BasicAnimationManager
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>BasicAnimationManager</p>
+
+
+  <div class='pre p1 fill-light mt0'>new BasicAnimationManager()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='bone'>
+      Bone
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Bone</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Bone(name: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>name</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='findnearestparentskeleton'>
+      FindNearestParentSkeleton
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>FindNearestParentSkeleton</p>
+
+
+  <div class='pre p1 fill-light mt0'>FindNearestParentSkeleton()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='morphattribute'>
+      MorphAttribute
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>MorphAttribute encapsulate Animation State</p>
+
+
+  <div class='pre p1 fill-light mt0'>new MorphAttribute(nbTarget: any, disable: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nbTarget</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>disable</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='morphgeometry'>
+      MorphGeometry
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>MorphGeometry manage up to MorphGeometry.MAX_MORPH_GPU morphTargets</p>
+
+
+  <div class='pre p1 fill-light mt0'>new MorphGeometry()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='rigtransformhardware'>
+      RigTransformHardware
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Hardware implementation for rigGeometry</p>
+
+
+  <div class='pre p1 fill-light mt0'>RigTransformHardware()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='skinningattribute'>
+      SkinningAttribute
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>SkinningAttribute encapsulate Animation State</p>
+
+
+  <div class='pre p1 fill-light mt0'>new SkinningAttribute(disable: any, boneUniformSize: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>disable</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>boneUniformSize</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stackedtranslate'>
+      StackedTranslate
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>StackedTranslate</p>
+
+
+  <div class='pre p1 fill-light mt0'>StackedTranslate(name: any, translate: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>name</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>translate</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatebone'>
+      UpdateBone
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>UpdateBone</p>
+
+
+  <div class='pre p1 fill-light mt0'>new UpdateBone()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatematrixtransform'>
+      UpdateMatrixTransform
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>UpdateMatrixTransform</p>
+
+
+  <div class='pre p1 fill-light mt0'>UpdateMatrixTransform()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='validateskeletonvisitor'>
+      ValidateSkeletonVisitor
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>ValidateSkeletonVisitor</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ValidateSkeletonVisitor()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updateskeleton'>
+      UpdateSkeleton
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>UpdateSkeleton</p>
+
+
+  <div class='pre p1 fill-light mt0'>new UpdateSkeleton()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='databasepager'>
+      DatabasePager
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Database paging class which manages the loading of files
+and synchronizing of loaded models with the main scene graph.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new DatabasePager()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='registry'>
+      Registry
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This is a very simplistic version of the OSG registry, we could
+expand/improve it in the future</p>
+
+
+  <div class='pre p1 fill-light mt0'>Registry</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cadmanipulator'>
+      CADManipulator
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>CADManipulator</p>
+
+
+  <div class='pre p1 fill-light mt0'>CADManipulator()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='firstpersonmanipulator'>
+      FirstPersonManipulator
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Authors:
+Matt Fontaine <a href="mailto:tehqin@gmail.com">tehqin@gmail.com</a>
+Cedric Pinson <a href="mailto:trigrou@gmail.com">trigrou@gmail.com</a></p>
+
+
+  <div class='pre p1 fill-light mt0'>FirstPersonManipulator(boundStrategy: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>boundStrategy</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='firstpersonmanipulator'>
+      FirstPersonManipulator
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>FirstPersonManipulator</p>
+
+
+  <div class='pre p1 fill-light mt0'>new FirstPersonManipulator(boundStrategy: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>boundStrategy</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='orbitmanipulator'>
+      OrbitManipulator
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>OrbitManipulator</p>
+
+
+  <div class='pre p1 fill-light mt0'>new OrbitManipulator(boundStrategy: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>boundStrategy</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='switchmanipulator'>
+      SwitchManipulator
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>OrbitManipulator</p>
+
+
+  <div class='pre p1 fill-light mt0'>new SwitchManipulator()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='loadaccessorbuffer'>
+      loadAccessorBuffer
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Loads a osg.BufferArray from a TypeArray obtained by using a glTF accessor.
+No memory allocation is done, the result is a subarray obtained from a glTF binary file</p>
+
+
+  <div class='pre p1 fill-light mt0'>loadAccessorBuffer(accessor: <a href="#object">Object</a>, type: (osg.BufferArray.ARRAY_BUFFER | osg.BufferArray.ELEMENT_ARRAY_BUFFER), BufferType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a>): osg.BufferArray</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>accessor</span> <code class='quiet'>(<a href="#object">Object</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>type</span> <code class='quiet'>((osg.BufferArray.ARRAY_BUFFER | osg.BufferArray.ELEMENT_ARRAY_BUFFER))</code>
+	    WebGL buffer type
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>BufferType</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a>)</code>
+	    specific TypedArray type used for extraction
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>osg.BufferArray</code>:
+        OSG readable buffer contaning the extracted data
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='loadtransform'>
+      loadTransform
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a MatrixTransform node by using
+glTF node's properties (matrix, translation, rotation, scale)</p>
+
+
+  <div class='pre p1 fill-light mt0'>loadTransform(glTFNode: <a href="#object">Object</a>): OSG.MatrixTransform</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>glTFNode</span> <code class='quiet'>(<a href="#object">Object</a>)</code>
+	    glTF node
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>OSG.MatrixTransform</code>:
+        MatrixTransform node containing the glTF node transform
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='preprocessanimations'>
+      preprocessAnimations
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Loads all the solid animations registering
+them in a BasicAnimationManager instance</p>
+
+
+  <div class='pre p1 fill-light mt0'>preprocessAnimations</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#basicanimationmanager">BasicAnimationManager</a></code>:
+        the animation manager containing the animations
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shadowedscene'>
+      ShadowedScene
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>ShadowedScene provides a mechanism for decorating a scene that the needs to have shadows cast upon it.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShadowedScene(settings: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>settings</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cleanscenegraph'>
+      cleanSceneGraph
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Clean scene graph from any shadow technique specific nodes, state and drawables.</p>
+
+
+  <div class='pre p1 fill-light mt0'>cleanSceneGraph()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='dirty'>
+      dirty
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Dirty any cache data structures held in the attached ShadowTechnique.</p>
+
+
+  <div class='pre p1 fill-light mt0'>dirty()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='computemultifrustumboundsvisitor'>
+      ComputeMultiFrustumBoundsVisitor
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>[ComputeFrustumBoundsVisitor get a scene bounds limited by a light and camera frustum]</p>
+
+
+  <div class='pre p1 fill-light mt0'>ComputeMultiFrustumBoundsVisitor()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shadowmap'>
+      ShadowMap
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>ShadowMap provides an implementation of shadow textures.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShadowMap(settings: any, shadowTexture: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>settings</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>shadowTexture</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='settextureunitbase'>
+      setTextureUnitBase
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>at which Texture unit number we start adding texture shadow</p>
+
+
+  <div class='pre p1 fill-light mt0'>setTextureUnitBase(unitBase: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>unitBase</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='settextureunitbase'>
+      setTextureUnitBase
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>at which Texture unit number we start adding texture shadow</p>
+
+
+  <div class='pre p1 fill-light mt0'>setTextureUnitBase(unitBase: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>unitBase</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='init'>
+      init
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>initialize the ShadowedScene and local cached data structures.</p>
+
+
+  <div class='pre p1 fill-light mt0'>init(atlasTexture: any, lightIndex: any, textureUnit: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>atlasTexture</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>lightIndex</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>textureUnit</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='init'>
+      init
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>initialize the ShadowedScene and local cached data structures.</p>
+
+
+  <div class='pre p1 fill-light mt0'>init()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='init'>
+      init
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Initializes this module. Safe to call more than once.</p>
+
+
+  <div class='pre p1 fill-light mt0'>init(ctx: !<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ctx</span> <code class='quiet'>(!<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>)</code>
+	    A WebGL context. If
+you have more than one context it doesn't matter which one
+you pass in, it is only used to pull out constants.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='init'>
+      init
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Initializes this module. Safe to call more than once.</p>
+
+
+  <div class='pre p1 fill-light mt0'>init</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ctx</span> <code class='quiet'>(!<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>)</code>
+	    A WebGL context. If
+you have more than one context it doesn't matter which one
+you pass in, it is only used to pull out constants.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shadowmapatlas'>
+      ShadowMapAtlas
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>ShadowMapAtlas provides an implementation of shadow textures.
+here, one shadow</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShadowMapAtlas(settings: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>settings</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shadowreceiveattribute'>
+      ShadowReceiveAttribute
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>ShadowReceiveAttribute encapsulate Shadow Main State object</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShadowReceiveAttribute(lightNum: any, disable: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>lightNum</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>disable</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shadowsettings'>
+      ShadowSettings
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>ShadowSettings provides the parameters that the ShadowTechnique should use as a guide for setting up shadowing</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShadowSettings(options: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shadowtechnique'>
+      ShadowTechnique
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>ShadowTechnique provides an implementation interface of shadow techniques.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShadowTechnique()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shadowtexture'>
+      ShadowTexture
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>ShadowTexture Attribute encapsulate Texture webgl object
+with Shadow specificities (no need of texcoord,fragtexcoord)
+trigger hash change when changing texture precision from float to byt
+shadowSettings.js header for param explanations</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShadowTexture()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='shadowtexture'>
+      ShadowTexture
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>ShadowTexture Attribute encapsulate Texture webgl object
+with Shadow specificities (no need of texcoord,fragtexcoord)
+trigger hash change when changing texture precision from float to byt
+shadowSettings.js header for param explanations</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShadowTexture()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='text'>
+      Text
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>Text(text: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>text</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='polytopeintersector'>
+      PolytopeIntersector
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Concrete class for implementing polytope intersections with the scene graph.
+To be used in conjunction with IntersectionVisitor.</p>
+
+
+  <div class='pre p1 fill-light mt0'>PolytopeIntersector()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='computeintersections'>
+      computeIntersections
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>X = 0 at the left
+Y = 0 at the BOTTOM</p>
+
+
+  <div class='pre p1 fill-light mt0'>computeIntersections(x: any, y: any, traversalMask: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>y</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>traversalMask</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='log'>
+      log
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Wrapped logging function.</p>
+
+
+  <div class='pre p1 fill-light mt0'>log(msg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>msg</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Message to log.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='error'>
+      error
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Wrapped error logging function.</p>
+
+
+  <div class='pre p1 fill-light mt0'>error(msg: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>msg</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Message to log.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='glvalidenumcontexts'>
+      glValidEnumContexts
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Which arguments are enums based on the number of arguments to the function.
+So
+'texImage2D': {
+9: { 0:true, 2:true, 6:true, 7:true },
+6: { 0:true, 2:true, 3:true, 4:true },
+},</p>
+<p>means if there are 9 arguments then 6 and 7 are enums, if there are 6
+arguments 3 and 4 are enums</p>
+
+
+  <div class='pre p1 fill-light mt0'>glValidEnumContexts</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='glenums'>
+      glEnums
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Map of numbers to names.</p>
+
+
+  <div class='pre p1 fill-light mt0'>glEnums</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='enumstringtovalue'>
+      enumStringToValue
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Map of names to numbers.</p>
+
+
+  <div class='pre p1 fill-light mt0'>enumStringToValue</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='checkinit'>
+      checkInit
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checks the utils have been initialized.</p>
+
+
+  <div class='pre p1 fill-light mt0'>checkInit()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mightbeenum'>
+      mightBeEnum
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns true or false if value matches any WebGL enum</p>
+
+
+  <div class='pre p1 fill-light mt0'>mightBeEnum(value: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    Value to check if it might be an enum.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True if value matches one of the WebGL defined enums
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mightbeenum'>
+      mightBeEnum
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns true or false if value matches any WebGL enum</p>
+
+
+  <div class='pre p1 fill-light mt0'>mightBeEnum</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    Value to check if it might be an enum.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        True if value matches one of the WebGL defined enums
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='glenumtostring'>
+      glEnumToString
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets an string version of an WebGL enum.</p>
+<p>Example:
+var str = WebGLDebugUtil.glEnumToString(ctx.getError());</p>
+
+
+  <div class='pre p1 fill-light mt0'>glEnumToString(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    Value to return an enum for
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The string version of the enum.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='glenumtostring'>
+      glEnumToString
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets an string version of an WebGL enum.</p>
+<p>Example:
+WebGLDebugUtil.init(ctx);
+var str = WebGLDebugUtil.glEnumToString(ctx.getError());</p>
+
+
+  <div class='pre p1 fill-light mt0'>glEnumToString</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    Value to return an enum for
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The string version of the enum.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='glfunctionargtostring'>
+      glFunctionArgToString
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Returns the string version of a WebGL argument.
+Attempts to convert enum arguments to strings.</p>
+
+
+  <div class='pre p1 fill-light mt0'>glFunctionArgToString(functionName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, numArgs: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, argumentIndex: any, value: any, argumentIndx: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>functionName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the name of the WebGL function.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>numArgs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    the number of arguments passed to the function.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>argumentIndex</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    The value of the argument.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>argumentIndx</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    the index of the argument.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The value as a string.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='glfunctionargtostring'>
+      glFunctionArgToString
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Converts the argument of a WebGL function to a string.
+Attempts to convert enum arguments to strings.</p>
+<p>Example:
+WebGLDebugUtil.init(ctx);
+var str = WebGLDebugUtil.glFunctionArgToString('bindTexture', 2, 0, gl.TEXTURE_2D);</p>
+<p>would return 'TEXTURE_2D'</p>
+
+
+  <div class='pre p1 fill-light mt0'>glFunctionArgToString</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>functionName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the name of the WebGL function.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>numArgs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The number of arguments
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>argumentIndx</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    the index of the argument.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>(any)</code>
+	    The value of the argument.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The value as a string.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='glfunctionargstostring'>
+      glFunctionArgsToString
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Converts the arguments of a WebGL function to a string.
+Attempts to convert enum arguments to strings.</p>
+
+
+  <div class='pre p1 fill-light mt0'>glFunctionArgsToString(functionName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, args: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>functionName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the name of the WebGL function.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>args</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The arguments.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The arguments as a string.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='glfunctionargstostring'>
+      glFunctionArgsToString
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Converts the arguments of a WebGL function to a string.
+Attempts to convert enum arguments to strings.</p>
+
+
+  <div class='pre p1 fill-light mt0'>glFunctionArgsToString</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>functionName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the name of the WebGL function.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>args</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    The arguments.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The arguments as a string.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='makedebugcontext'>
+      makeDebugContext
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Given a WebGL context returns a wrapped context that calls
+gl.getError after every command and calls a function if the
+result is not gl.NO_ERROR.</p>
+
+
+  <div class='pre p1 fill-light mt0'>makeDebugContext(ctx: !<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>, opt_onErrorFunc: !function (err, funcName, args): void, opt_onFunc: !function (funcName, args): void, opt_err_ctx: !<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ctx</span> <code class='quiet'>(!<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>)</code>
+	    The webgl context to
+wrap.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>opt_onErrorFunc</span> <code class='quiet'>(!function (err, funcName, args): void)</code>
+	    The function to call when gl.getError returns an
+error. If not specified the default function calls
+console.log with a message.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>opt_onFunc</span> <code class='quiet'>(!function (funcName, args): void)</code>
+	    The
+function to call when each webgl function is called.
+You can use this to log all calls for example.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>opt_err_ctx</span> <code class='quiet'>(!<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>)</code>
+	    The webgl context
+to call getError on if different than ctx.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='makedebugcontext'>
+      makeDebugContext
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Given a WebGL context returns a wrapped context that calls
+gl.getError after every command and calls a function if the
+result is not NO_ERROR.</p>
+<p>You can supply your own function if you want. For example, if you'd like
+an exception thrown on any GL error you could do this</p>
+<p>   function throwOnGLError(err, funcName, args) {
+throw WebGLDebugUtils.glEnumToString(err) +
+" was caused by call to " + funcName;
+};</p>
+<p>   ctx = WebGLDebugUtils.makeDebugContext(
+canvas.getContext("webgl"), throwOnGLError);</p>
+
+
+  <div class='pre p1 fill-light mt0'>makeDebugContext</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ctx</span> <code class='quiet'>(!<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>)</code>
+	    The webgl context to wrap.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>opt_onErrorFunc</span> <code class='quiet'>(!function (err, funcName, args): void)</code>
+	    The function
+to call when gl.getError returns an error. If not specified the default
+function calls console.log with a message.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>opt_onFunc</span> <code class='quiet'>(!function (funcName, args): void)</code>
+	    The
+function to call when each webgl function is called. You
+can use this to log all calls for example.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='makelostcontextsimulatingcanvas'>
+      makeLostContextSimulatingCanvas
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Given a canvas element returns a wrapped canvas element that will
+simulate lost context. The canvas returned adds the following functions.</p>
+<p>loseContext:
+simulates a lost context event.</p>
+<p>restoreContext:
+simulates the context being restored.</p>
+<p>lostContextInNCalls:
+loses the context after N gl calls.</p>
+<p>getNumCalls:
+tells you how many gl calls there have been so far.</p>
+<p>setRestoreTimeout:
+sets the number of milliseconds until the context is restored
+after it has been lost. Defaults to 0. Pass -1 to prevent
+automatic restoring.</p>
+
+
+  <div class='pre p1 fill-light mt0'>makeLostContextSimulatingCanvas</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>canvas</span> <code class='quiet'>(!Canvas)</code>
+	    The canvas element to wrap.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resettoinitialstate'>
+      resetToInitialState
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Resets a context to the initial state.</p>
+
+
+  <div class='pre p1 fill-light mt0'>resetToInitialState</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ctx</span> <code class='quiet'>(!<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a>)</code>
+	    The webgl context to
+reset.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='webglutils'>
+      WebGLUtils
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This file contains functions every webgl program will need
+a version of one way or another.</p>
+<p>Instead of setting up a context manually it is recommended to
+use. This will check for success or failure. On failure it
+will attempt to present an approriate message to the user.</p>
+<pre><code>  gl = WebGLUtils.setupWebGL(canvas);
+</code></pre>
+<p>For animated WebGL apps use of setTimeout or setInterval are
+discouraged. It is recommended you structure your rendering
+loop like this.</p>
+<pre><code>  function render() {
+    window.requestAnimationFrame(render, canvas);
+
+    // do rendering
+    ...
+  }
+  render();
+</code></pre>
+<p>This will call your rendering function up to the refresh rate
+of your display but will stop rendering if your app is not
+visible.</p>
+
+
+  <div class='pre p1 fill-light mt0'>WebGLUtils</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='makefailhtml'>
+      makeFailHTML
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates the HTLM for a failure message</p>
+
+
+  <div class='pre p1 fill-light mt0'>makeFailHTML(msg: any, canvasContainerId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>msg</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>canvasContainerId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    id of container of th
+canvas.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        The html.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='get_a_webgl_browser'>
+      GET_A_WEBGL_BROWSER
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mesasge for getting a webgl browser</p>
+
+
+  <div class='pre p1 fill-light mt0'>GET_A_WEBGL_BROWSER</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='other_problem'>
+      OTHER_PROBLEM
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Mesasge for need better hardware</p>
+
+
+  <div class='pre p1 fill-light mt0'>OTHER_PROBLEM</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setupwebgl'>
+      setupWebGL
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a webgl context. If creation fails it will
+change the contents of the container of the <canvas>
+tag to an error message with the correct links for WebGL.</p>
+
+
+  <div class='pre p1 fill-light mt0'>setupWebGL(canvas: any, opt_attribs: any, opt_onError: any): <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>canvas</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>opt_attribs</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>opt_onError</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext</a></code>:
+        The created context.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Element</p>
+
+
+  <div class='pre p1 fill-light mt0'></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>WebGLContextCreationAttributes</p>
+
+
+  <div class='pre p1 fill-light mt0'></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id=''>
+      
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>function:(msg)</p>
+
+
+  <div class='pre p1 fill-light mt0'></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='checkandcreate3dcontext'>
+      checkAndCreate3DContext
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>try to creaate webgl contexts</p>
+
+
+  <div class='pre p1 fill-light mt0'>checkAndCreate3DContext(canvas: Canvas, opt_attribs: any, names: any, webgl: opt_attribs, list: names): !WebGLContext</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>canvas</span> <code class='quiet'>(Canvas)</code>
+	    The canvas tag to get context
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>opt_attribs</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>names</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>webgl</span> <code class='quiet'>(opt_attribs)</code>
+	    context options
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>list</span> <code class='quiet'>(names)</code>
+	    of webgl context type to try
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>!WebGLContext</code>:
+        The created context.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='create3dcontext'>
+      create3DContext
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a webgl context.</p>
+
+
+  <div class='pre p1 fill-light mt0'>create3DContext(canvas: any, opt_attribs: any, null: any, webgl: !opt_attribs): !WebGLContext</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>canvas</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>opt_attribs</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>null</span> <code class='quiet'>(any)</code>
+	    !Canvas} canvas The canvas tag to get context
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>webgl</span> <code class='quiet'>(!opt_attribs)</code>
+	    context options
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>!WebGLContext</code>:
+        The created context.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='requestanimationframe'>
+      requestAnimationFrame
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Provides requestAnimationFrame in a cross browser
+way.</p>
+
+
+  <div class='pre p1 fill-light mt0'>requestAnimationFrame</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
