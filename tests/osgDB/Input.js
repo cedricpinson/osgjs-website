@@ -88,7 +88,7 @@ export default function() {
 
         (function() {
             var img = new Image();
-            input.fetchImage(img, 'http://osgjs.org/image.png', {
+            input.fetchImage(img, 'image.png', {
                 imageCrossOrigin: 'anonymous'
             });
             assert.isOk(img.getImage().crossOrigin === 'anonymous', 'check crossOrigin');
